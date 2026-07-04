@@ -402,63 +402,7 @@
       .message-box .text { font-size: 14px; }
     }
 
-    /* ── domain list ── */
-    .domain-list-section {
-      margin-top: 20px;
-    }
-    .domain-list-section .label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: .6px;
-      margin-bottom: 10px;
-    }
-    .domain-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 8px;
-    }
-    .domain-grid .domain-item {
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text-muted);
-      font-size: 13px;
-      font-weight: 500;
-      transition: all var(--transition);
-      text-align: center;
-      cursor: default;
-      word-break: break-word;
-    }
-    .domain-grid .domain-item:hover {
-      border-color: var(--accent);
-      color: var(--text);
-      background: var(--surface2);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(124, 92, 255, .15);
-    }
-    .domain-grid .domain-item .copy-hint {
-      display: none;
-      font-size: 10px;
-      color: var(--text-dim);
-      margin-top: 2px;
-    }
-    .domain-grid .domain-item:hover .copy-hint {
-      display: block;
-    }
-    @media (max-width: 480px) {
-      .domain-grid {
-        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-        gap: 6px;
-      }
-      .domain-grid .domain-item {
-        font-size: 12px;
-        padding: 6px 10px;
-      }
-    }
-
+    /* ── panel (right column) ── */
     .panel {
       padding: 18px 16px 16px;
       border-radius: var(--radius);
@@ -690,6 +634,82 @@
       .meta { font-size: 12px; gap: 8px; }
       .trust-item { font-size: 12px; }
     }
+
+    /* ── domain list (now below the card) ── */
+    .domain-section {
+      margin-top: 20px;
+      padding: 18px 16px 14px;
+      border-top: 1px solid var(--border);
+      background: rgba(0, 0, 0, .20);
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .domain-section .label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 12px;
+    }
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .domain-grid .domain-item {
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 500;
+      transition: all var(--transition);
+      text-align: center;
+      cursor: pointer;
+      word-break: break-word;
+      user-select: none;
+      touch-action: manipulation;
+    }
+    .domain-grid .domain-item:hover {
+      border-color: var(--accent);
+      background: var(--surface2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(124, 92, 255, .15);
+    }
+    .domain-grid .domain-item:active {
+      transform: scale(.96);
+    }
+    .domain-grid .domain-item .copy-hint {
+      display: none;
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+    .domain-grid .domain-item:hover .copy-hint {
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .domain-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 8px;
+      }
+      .domain-grid .domain-item {
+        font-size: 14px;
+        padding: 14px 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      .domain-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 6px;
+      }
+      .domain-grid .domain-item {
+        font-size: 13px;
+        padding: 12px 8px;
+      }
+    }
+
     .footer {
       margin-top: 16px;
       display: flex;
@@ -735,6 +755,8 @@
         font-size: 13px;
         padding: 10px 18px;
         bottom: 16px;
+        white-space: normal;
+        max-width: 92vw;
       }
     }
     .sr-only {
@@ -803,32 +825,6 @@
             <span class="text" data-i18n="message">
               These domains are for sale. Send your offer via WhatsApp using the form.
             </span>
-          </div>
-
-          <!-- Domain List -->
-          <div class="domain-list-section">
-            <div class="label" data-i18n="domains_label">Available Domains</div>
-            <div class="domain-grid" id="domainGrid">
-              <div class="domain-item" data-domain="galatahotel.com">galatahotel.com</div>
-              <div class="domain-item" data-domain="ihaleilanlari.com">ihaleilanlari.com</div>
-              <div class="domain-item" data-domain="galatahotel.com.tr">galatahotel.com.tr</div>
-              <div class="domain-item" data-domain="anneden.com.tr">anneden.com.tr</div>
-              <div class="domain-item" data-domain="muteahhit.com">muteahhit.com</div>
-              <div class="domain-item" data-domain="misafir.com">misafir.com</div>
-              <div class="domain-item" data-domain="subesiz.com">subesiz.com</div>
-              <div class="domain-item" data-domain="mahkeme.com">mahkeme.com</div>
-              <div class="domain-item" data-domain="gumrukcu.com">gumrukcu.com</div>
-              <div class="domain-item" data-domain="masaj.com">masaj.com</div>
-              <div class="domain-item" data-domain="pehlivan.com">pehlivan.com</div>
-              <div class="domain-item" data-domain="sebze.com">sebze.com</div>
-              <div class="domain-item" data-domain="studyo.com">studyo.com</div>
-              <div class="domain-item" data-domain="migros.org">migros.org</div>
-              <div class="domain-item" data-domain="mutluluk.com">mutluluk.com</div>
-              <div class="domain-item" data-domain="sokak.com">sokak.com</div>
-              <div class="domain-item" data-domain="seminer.com">seminer.com</div>
-              <div class="domain-item" data-domain="cenaze.com">cenaze.com</div>
-              <div class="domain-item" data-domain="dogalgaz.com">dogalgaz.com</div>
-            </div>
           </div>
         </section>
 
@@ -899,6 +895,33 @@
         </aside>
 
       </div>
+
+      <!-- Domain list (now below the card-inner) -->
+      <div class="domain-section">
+        <div class="label" data-i18n="domains_label">Available Domains</div>
+        <div class="domain-grid" id="domainGrid">
+          <div class="domain-item" data-domain="galatahotel.com">galatahotel.com</div>
+          <div class="domain-item" data-domain="ihaleilanlari.com">ihaleilanlari.com</div>
+          <div class="domain-item" data-domain="galatahotel.com.tr">galatahotel.com.tr</div>
+          <div class="domain-item" data-domain="anneden.com.tr">anneden.com.tr</div>
+          <div class="domain-item" data-domain="muteahhit.com">muteahhit.com</div>
+          <div class="domain-item" data-domain="misafir.com">misafir.com</div>
+          <div class="domain-item" data-domain="subesiz.com">subesiz.com</div>
+          <div class="domain-item" data-domain="mahkeme.com">mahkeme.com</div>
+          <div class="domain-item" data-domain="gumrukcu.com">gumrukcu.com</div>
+          <div class="domain-item" data-domain="masaj.com">masaj.com</div>
+          <div class="domain-item" data-domain="pehlivan.com">pehlivan.com</div>
+          <div class="domain-item" data-domain="sebze.com">sebze.com</div>
+          <div class="domain-item" data-domain="studyo.com">studyo.com</div>
+          <div class="domain-item" data-domain="migros.org">migros.org</div>
+          <div class="domain-item" data-domain="mutluluk.com">mutluluk.com</div>
+          <div class="domain-item" data-domain="sokak.com">sokak.com</div>
+          <div class="domain-item" data-domain="seminer.com">seminer.com</div>
+          <div class="domain-item" data-domain="cenaze.com">cenaze.com</div>
+          <div class="domain-item" data-domain="dogalgaz.com">dogalgaz.com</div>
+        </div>
+      </div>
+
     </main>
 
     <footer class="footer">
