@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
-  <title>cenaze.com — Premium Domain For Sale</title>
-  <meta name="description" content="cenaze.com is a premium domain name available for purchase. Make an offer today." />
+  <title>cenaze.com — Premium Domains For Sale</title>
+  <meta name="description" content="Premium domains for sale: cenaze.com, galatahotel.com, ihaleilanlari.com, and more. Make an offer today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
   <style>
-    /* ── reset & base ── */
     *,
     *::before,
     *::after {
@@ -52,8 +51,6 @@
       line-height: 1.5;
       -webkit-tap-highlight-color: transparent;
     }
-
-    /* ── animated background ── */
     .bg-canvas {
       position: fixed;
       inset: 0;
@@ -102,8 +99,6 @@
       66% { transform: translate(-20px, 30px) scale(.95); }
       100% { transform: translate(15px, -15px) scale(1.05); }
     }
-
-    /* ── particles ── */
     .particles {
       position: fixed;
       inset: 0;
@@ -131,15 +126,11 @@
       75% { transform: translateY(-300px) translateX(30px) scale(1.1); opacity: .35; }
       100% { transform: translateY(-400px) translateX(-10px) scale(1); opacity: .1; }
     }
-
-    /* ── wrap ── */
     .wrap {
       width: min(1040px, 100%);
       position: relative;
       z-index: 1;
     }
-
-    /* ── topbar ── */
     .topbar {
       display: flex;
       align-items: center;
@@ -305,8 +296,6 @@
       .brand-text p { font-size: 11px; }
       .brand-icon { width: 40px; height: 40px; }
     }
-
-    /* ── card ── */
     .card {
       border-radius: var(--radius);
       background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .01));
@@ -351,8 +340,6 @@
         gap: 16px;
       }
     }
-
-    /* ── left column ── */
     .headline {
       margin: 0;
       font-size: 44px;
@@ -415,7 +402,63 @@
       .message-box .text { font-size: 14px; }
     }
 
-    /* ── panel ── */
+    /* ── domain list ── */
+    .domain-list-section {
+      margin-top: 20px;
+    }
+    .domain-list-section .label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 10px;
+    }
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 8px;
+    }
+    .domain-grid .domain-item {
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      transition: all var(--transition);
+      text-align: center;
+      cursor: default;
+      word-break: break-word;
+    }
+    .domain-grid .domain-item:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: var(--surface2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(124, 92, 255, .15);
+    }
+    .domain-grid .domain-item .copy-hint {
+      display: none;
+      font-size: 10px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+    .domain-grid .domain-item:hover .copy-hint {
+      display: block;
+    }
+    @media (max-width: 480px) {
+      .domain-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 6px;
+      }
+      .domain-grid .domain-item {
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+    }
+
     .panel {
       padding: 18px 16px 16px;
       border-radius: var(--radius);
@@ -457,8 +500,6 @@
     @media (max-width: 480px) {
       .panel .hint { font-size: 12px; }
     }
-
-    /* ── form ── */
     .form-group {
       margin-bottom: 12px;
     }
@@ -482,7 +523,7 @@
       color: var(--text);
       padding: 12px 14px;
       outline: none;
-      font-size: 16px; /* Prevents iOS zoom */
+      font-size: 16px;
       font-family: inherit;
       transition: border-color var(--transition), box-shadow var(--transition);
       -webkit-appearance: none;
@@ -512,8 +553,6 @@
         font-size: 16px;
       }
     }
-
-    /* ── buttons ── */
     .actions {
       display: flex;
       flex-direction: column;
@@ -608,8 +647,6 @@
         min-height: 46px;
       }
     }
-
-    /* ── meta ── */
     .meta {
       margin-top: 14px;
       display: flex;
@@ -653,8 +690,6 @@
       .meta { font-size: 12px; gap: 8px; }
       .trust-item { font-size: 12px; }
     }
-
-    /* ── footer ── */
     .footer {
       margin-top: 16px;
       display: flex;
@@ -669,8 +704,6 @@
     @media (max-width: 480px) {
       .footer { font-size: 11px; justify-content: center; text-align: center; }
     }
-
-    /* ── toast ── */
     .toast {
       position: fixed;
       bottom: 24px;
@@ -704,8 +737,6 @@
         bottom: 16px;
       }
     }
-
-    /* ── utilities ── */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -720,7 +751,6 @@
 </head>
 <body>
 
-  <!-- background -->
   <div class="bg-canvas" aria-hidden="true">
     <div class="orb"></div>
     <div class="orb"></div>
@@ -735,19 +765,16 @@
     <div class="particle"></div>
   </div>
 
-  <!-- toast -->
   <div class="toast" id="toast" role="alert" aria-live="polite"></div>
 
-  <!-- main -->
   <div class="wrap">
 
-    <!-- topbar -->
     <header class="topbar">
       <a class="brand" href="#" aria-label="cenaze.com">
         <div class="brand-icon" aria-hidden="true"></div>
         <div class="brand-text">
           <h1>cenaze.com</h1>
-          <p data-i18n="tagline">Premium domain for sale</p>
+          <p data-i18n="tagline">Premium domains for sale</p>
         </div>
       </a>
       <div class="topbar-right">
@@ -762,27 +789,52 @@
       </div>
     </header>
 
-    <!-- card -->
     <main class="card">
       <div class="card-inner">
 
         <!-- left -->
         <section>
-          <h1 class="headline" data-i18n="headline">This Domain<br />Is For Sale</h1>
+          <h1 class="headline" data-i18n="headline">Premium Domains<br />For Sale</h1>
           <p class="subhead" data-i18n="subhead">
             Fill in the form below, then tap <strong>WhatsApp</strong> to send your offer instantly.
           </p>
           <div class="message-box">
             <span class="icon" aria-hidden="true"></span>
             <span class="text" data-i18n="message">
-              This domain is for sale. Send your offer via WhatsApp using the form.
+              These domains are for sale. Send your offer via WhatsApp using the form.
             </span>
+          </div>
+
+          <!-- Domain List -->
+          <div class="domain-list-section">
+            <div class="label" data-i18n="domains_label">Available Domains</div>
+            <div class="domain-grid" id="domainGrid">
+              <div class="domain-item" data-domain="galatahotel.com">galatahotel.com</div>
+              <div class="domain-item" data-domain="ihaleilanlari.com">ihaleilanlari.com</div>
+              <div class="domain-item" data-domain="galatahotel.com.tr">galatahotel.com.tr</div>
+              <div class="domain-item" data-domain="anneden.com.tr">anneden.com.tr</div>
+              <div class="domain-item" data-domain="muteahhit.com">muteahhit.com</div>
+              <div class="domain-item" data-domain="misafir.com">misafir.com</div>
+              <div class="domain-item" data-domain="subesiz.com">subesiz.com</div>
+              <div class="domain-item" data-domain="mahkeme.com">mahkeme.com</div>
+              <div class="domain-item" data-domain="gumrukcu.com">gumrukcu.com</div>
+              <div class="domain-item" data-domain="masaj.com">masaj.com</div>
+              <div class="domain-item" data-domain="pehlivan.com">pehlivan.com</div>
+              <div class="domain-item" data-domain="sebze.com">sebze.com</div>
+              <div class="domain-item" data-domain="studyo.com">studyo.com</div>
+              <div class="domain-item" data-domain="migros.org">migros.org</div>
+              <div class="domain-item" data-domain="mutluluk.com">mutluluk.com</div>
+              <div class="domain-item" data-domain="sokak.com">sokak.com</div>
+              <div class="domain-item" data-domain="seminer.com">seminer.com</div>
+              <div class="domain-item" data-domain="cenaze.com">cenaze.com</div>
+              <div class="domain-item" data-domain="dogalgaz.com">dogalgaz.com</div>
+            </div>
           </div>
         </section>
 
         <!-- right / panel -->
         <aside class="panel">
-          <div class="label" data-i18n="domain_label">Domain</div>
+          <div class="label" data-i18n="domain_label">Featured Domain</div>
           <div class="domain">cenaze.com</div>
           <div class="hint" data-i18n="price_hint">Pricing by offer &bull; Private negotiations welcome.</div>
 
@@ -849,11 +901,10 @@
       </div>
     </main>
 
-    <!-- footer -->
     <footer class="footer">
       <div>&copy; <span id="year"></span> cenaze.com &bull; <span data-i18n="footer_rights">All rights reserved</span></div>
       <div>
-        <span class="kbd" style="font-size:12px;padding:2px 12px;" data-i18n="footer_badge">This page is for sale</span>
+        <span class="kbd" style="font-size:12px;padding:2px 12px;" data-i18n="footer_badge">Premium domains for sale</span>
       </div>
     </footer>
 
@@ -863,19 +914,19 @@
     (function() {
       'use strict';
 
-      // ── config ──
       const DOMAIN = 'cenaze.com';
       const PHONE = '989390247578';
 
-      // ── translations (English & Turkish only) ──
+      // ── translations ──
       const t = {
         en: {
-          tagline: 'Premium domain for sale',
+          tagline: 'Premium domains for sale',
           badge: 'Available now',
-          headline: 'This Domain<br />Is For Sale',
+          headline: 'Premium Domains<br />For Sale',
           subhead: 'Fill in the form below, then tap <strong>WhatsApp</strong> to send your offer instantly.',
-          message: 'This domain is for sale. Send your offer via WhatsApp using the form.',
-          domain_label: 'Domain',
+          message: 'These domains are for sale. Send your offer via WhatsApp using the form.',
+          domains_label: 'Available Domains',
+          domain_label: 'Featured Domain',
           price_hint: 'Pricing by offer • Private negotiations welcome.',
           label_name: 'Your name <span class="req">*</span>',
           label_offer: 'Offer amount <span class="req">*</span>',
@@ -889,7 +940,7 @@
           trust_fast: 'Fast reply',
           trust_verified: 'Verified seller',
           footer_rights: 'All rights reserved',
-          footer_badge: 'This page is for sale',
+          footer_badge: 'Premium domains for sale',
           wa_intro: "Hi! I'm interested in buying {{domain}}.",
           wa_offer_label: "Offer details:",
           wa_name_label: "Name:",
@@ -904,12 +955,13 @@
           copy_success: 'Copied "{{domain}}" to clipboard.'
         },
         tr: {
-          tagline: 'Premium alan adı satışta',
+          tagline: 'Premium alan adları satışta',
           badge: 'Şimdi müsait',
-          headline: 'Bu Alan Adı<br />Satıştadır',
+          headline: 'Premium Alan Adları<br />Satıştadır',
           subhead: 'Aşağıdaki formu doldurun, ardından teklifinizi anında göndermek için <strong>WhatsApp</strong> \'a dokunun.',
-          message: 'Bu alan adı satıştadır. Formu kullanarak WhatsApp\'tan teklifinizi gönderin.',
-          domain_label: 'Alan Adı',
+          message: 'Bu alan adları satıştadır. Formu kullanarak WhatsApp\'tan teklifinizi gönderin.',
+          domains_label: 'Satılık Alan Adları',
+          domain_label: 'Öne Çıkan Alan Adı',
           price_hint: 'Teklifle fiyatlandırma • Özel görüşmelere açığız.',
           label_name: 'Adınız <span class="req">*</span>',
           label_offer: 'Teklif miktarı <span class="req">*</span>',
@@ -923,7 +975,7 @@
           trust_fast: 'Hızlı yanıt',
           trust_verified: 'Doğrulanmış satıcı',
           footer_rights: 'Tüm hakları saklıdır',
-          footer_badge: 'Bu sayfa satıştadır',
+          footer_badge: 'Premium alan adları satışta',
           wa_intro: "Merhaba, {{domain}} alan adını satın almakla ilgileniyorum.",
           wa_offer_label: "Teklif detayları:",
           wa_name_label: "İsim:",
@@ -950,6 +1002,7 @@
       const waBtn = document.getElementById('waBtn');
       const copyBtn = document.getElementById('copyBtn');
       const toast = document.getElementById('toast');
+      const domainItems = document.querySelectorAll('.domain-item');
 
       // ── helpers ──
       function clean(s) { return (s ?? '').toString().trim(); }
@@ -976,7 +1029,6 @@
         currentLang = lang;
 
         htmlRoot.lang = lang;
-        // Always LTR (no Persian, so no RTL needed)
         htmlRoot.dir = 'ltr';
 
         i18nEls.forEach(el => {
@@ -991,7 +1043,6 @@
           btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        // placeholders
         const ph = {
           en: { name: 'e.g. John Doe', offer: 'e.g. 5,000 USD', email: 'you@example.com',
             msg: 'Timeline, transfer method, or any details…' },
@@ -1004,7 +1055,6 @@
         emailEl.placeholder = p.email;
         msgEl.placeholder = p.msg;
 
-        // update button text
         const btnText = waBtn.querySelector('.btn-text');
         if (btnText) {
           const waKey = 'wa_button';
@@ -1016,6 +1066,34 @@
       // ── language switcher ──
       langBtns.forEach(btn => {
         btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+      });
+
+      // ── domain click → copy ──
+      domainItems.forEach(item => {
+        item.addEventListener('click', async function() {
+          const domain = this.dataset.domain;
+          try {
+            await navigator.clipboard.writeText(domain);
+            const dict = t[currentLang] || t.en;
+            showToast(dict.copy_success.replace('{{domain}}', domain));
+            // Visual feedback
+            const originalBg = this.style.background;
+            this.style.background = 'rgba(124, 92, 255, .25)';
+            setTimeout(() => {
+              this.style.background = originalBg;
+            }, 600);
+          } catch (_) {
+            // fallback
+            const ta = document.createElement('textarea');
+            ta.value = domain;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            const dict = t[currentLang] || t.en;
+            showToast(dict.copy_success.replace('{{domain}}', domain));
+          }
+        });
       });
 
       // ── build WhatsApp message ──
@@ -1068,7 +1146,7 @@
         }, 300);
       }
 
-      // ── copy domain ──
+      // ── copy featured domain ──
       async function copyDomain() {
         const dict = t[currentLang] || t.en;
         try {
@@ -1096,7 +1174,6 @@
       waBtn.addEventListener('click', sendWhatsApp);
       copyBtn.addEventListener('click', copyDomain);
 
-      // Enter key submits (except textarea)
       document.querySelectorAll('#offerForm input, #offerForm textarea').forEach(el => {
         el.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' && el.tagName !== 'TEXTAREA') {
@@ -1106,7 +1183,6 @@
         });
       });
 
-      // Cmd+Enter / Ctrl+Enter
       document.addEventListener('keydown', (e) => {
         if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
           const active = document.activeElement;
@@ -1120,8 +1196,6 @@
       // ── init ──
       applyLanguage(currentLang);
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      // focus name after load
       setTimeout(() => nameEl.focus(), 500);
 
     })();
