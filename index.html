@@ -1,1015 +1,1131 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="htmlRoot" dir="ltr">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>cenaze.com — Premium Domain For Sale</title>
-    <meta name="description" content="cenaze.com is a premium domain name available for purchase. Make an offer today." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
-    <style>
-        /* ── reset & base ── */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        :root {
-            --bg: #05060a;
-            --surface: rgba(255, 255, 255, .04);
-            --surface2: rgba(255, 255, 255, .07);
-            --border: rgba(255, 255, 255, .10);
-            --border-hover: rgba(255, 255, 255, .22);
-            --text: #eaf0ff;
-            --text-muted: rgba(234, 240, 255, .65);
-            --text-dim: rgba(234, 240, 255, .40);
-            --accent: #7c5cff;
-            --accent2: #22d3ee;
-            --accent-glow: rgba(124, 92, 255, .35);
-            --radius: 20px;
-            --radius-sm: 12px;
-            --shadow: 0 24px 80px rgba(0, 0, 0, .60);
-            --transition: 0.25s cubic-bezier(.25, .46, .45, .94);
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            min-height: 100vh;
-            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px 16px;
-            position: relative;
-            overflow-x: hidden;
-        }
-        /* ── animated background ── */
-        .bg-canvas {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
-            background:
-                radial-gradient(1200px 700px at 10% 5%, rgba(124, 92, 255, .18), transparent 60%),
-                radial-gradient(1000px 600px at 90% 10%, rgba(34, 211, 238, .12), transparent 55%),
-                linear-gradient(180deg, #05060a 0%, #07090f 100%);
-        }
-        .bg-canvas .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: .20;
-            animation: floatOrb 18s ease-in-out infinite alternate;
-        }
-        .bg-canvas .orb:nth-child(1) {
-            width: 500px;
-            height: 500px;
-            background: #7c5cff;
-            top: -10%;
-            left: -8%;
-            animation-duration: 22s;
-        }
-        .bg-canvas .orb:nth-child(2) {
-            width: 400px;
-            height: 400px;
-            background: #22d3ee;
-            bottom: -12%;
-            right: -6%;
-            animation-duration: 26s;
-            animation-delay: -6s;
-        }
-        .bg-canvas .orb:nth-child(3) {
-            width: 300px;
-            height: 300px;
-            background: #a78bfa;
-            top: 40%;
-            right: 20%;
-            animation-duration: 20s;
-            animation-delay: -10s;
-            opacity: .10;
-        }
-        @keyframes floatOrb {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(30px, -40px) scale(1.1);
-            }
-            66% {
-                transform: translate(-20px, 30px) scale(.95);
-            }
-            100% {
-                transform: translate(15px, -15px) scale(1.05);
-            }
-        }
-        /* ── particles ── */
-        .particles {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, .20);
-            animation: drift linear infinite;
-        }
-        .particle:nth-child(1) {
-            left: 10%;
-            top: 20%;
-            animation-duration: 14s;
-            animation-delay: 0s;
-            width: 3px;
-            height: 3px;
-        }
-        .particle:nth-child(2) {
-            left: 25%;
-            top: 60%;
-            animation-duration: 18s;
-            animation-delay: -3s;
-            width: 5px;
-            height: 5px;
-            opacity: .15;
-        }
-        .particle:nth-child(3) {
-            left: 55%;
-            top: 15%;
-            animation-duration: 16s;
-            animation-delay: -6s;
-            width: 4px;
-            height: 4px;
-        }
-        .particle:nth-child(4) {
-            left: 70%;
-            top: 70%;
-            animation-duration: 20s;
-            animation-delay: -9s;
-            width: 6px;
-            height: 6px;
-            opacity: .10;
-        }
-        .particle:nth-child(5) {
-            left: 85%;
-            top: 30%;
-            animation-duration: 13s;
-            animation-delay: -4s;
-            width: 3px;
-            height: 3px;
-        }
-        .particle:nth-child(6) {
-            left: 40%;
-            top: 80%;
-            animation-duration: 22s;
-            animation-delay: -7s;
-            width: 5px;
-            height: 5px;
-            opacity: .12;
-        }
-        @keyframes drift {
-            0% {
-                transform: translateY(0) translateX(0) scale(1);
-                opacity: .2;
-            }
-            25% {
-                transform: translateY(-120px) translateX(30px) scale(1.2);
-                opacity: .4;
-            }
-            50% {
-                transform: translateY(-240px) translateX(-20px) scale(.8);
-                opacity: .2;
-            }
-            75% {
-                transform: translateY(-360px) translateX(40px) scale(1.1);
-                opacity: .35;
-            }
-            100% {
-                transform: translateY(-480px) translateX(-10px) scale(1);
-                opacity: .1;
-            }
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
+  <title>cenaze.com — Premium Domain For Sale</title>
+  <meta name="description" content="cenaze.com is a premium domain name available for purchase. Make an offer today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── reset & base ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --bg: #05060a;
+      --surface: rgba(255, 255, 255, .05);
+      --surface2: rgba(255, 255, 255, .08);
+      --border: rgba(255, 255, 255, .10);
+      --border-hover: rgba(255, 255, 255, .22);
+      --text: #eaf0ff;
+      --text-muted: rgba(234, 240, 255, .65);
+      --text-dim: rgba(234, 240, 255, .40);
+      --accent: #7c5cff;
+      --accent2: #22d3ee;
+      --accent-glow: rgba(124, 92, 255, .35);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, .60);
+      --transition: 0.25s cubic-bezier(.25, .46, .45, .94);
+      --font: 'Inter', 'Tahoma', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      min-height: 100vh;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 12px 20px;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        /* ── wrap ── */
-        .wrap {
-            width: min(1020px, 100%);
-            position: relative;
-            z-index: 1;
-        }
+    /* ── animated background ── */
+    .bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .bg-canvas .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .15;
+      animation: floatOrb 20s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    .bg-canvas .orb:nth-child(1) {
+      width: 400px;
+      height: 400px;
+      background: #7c5cff;
+      top: -20%;
+      left: -20%;
+      animation-duration: 24s;
+    }
+    .bg-canvas .orb:nth-child(2) {
+      width: 350px;
+      height: 350px;
+      background: #22d3ee;
+      bottom: -20%;
+      right: -20%;
+      animation-duration: 28s;
+      animation-delay: -6s;
+    }
+    .bg-canvas .orb:nth-child(3) {
+      width: 250px;
+      height: 250px;
+      background: #a78bfa;
+      top: 40%;
+      right: 10%;
+      animation-duration: 22s;
+      animation-delay: -10s;
+      opacity: .08;
+    }
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -40px) scale(1.1); }
+      66% { transform: translate(-20px, 30px) scale(.95); }
+      100% { transform: translate(15px, -15px) scale(1.05); }
+    }
 
-        /* ── topbar ── */
-        .topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            user-select: none;
-            text-decoration: none;
-            color: inherit;
-        }
-        .brand-logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, var(--accent), var(--accent2));
-            box-shadow: 0 12px 40px var(--accent-glow);
-            position: relative;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 1px solid rgba(255, 255, 255, .15);
-            transition: transform var(--transition), box-shadow var(--transition);
-        }
-        .brand-logo:hover {
-            transform: scale(1.04);
-            box-shadow: 0 16px 56px var(--accent-glow);
-        }
-        .brand-logo::before {
-            content: '';
-            position: absolute;
-            inset: -50%;
-            background: conic-gradient(from 180deg, transparent, rgba(255, 255, 255, .30), transparent);
-            animation: spin 8s linear infinite;
-        }
-        .brand-logo::after {
-            content: 'C';
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: 800;
-            color: #fff;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, .30);
-            z-index: 1;
-            letter-spacing: 0;
-        }
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-        .brand-text h1 {
-            margin: 0;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: -.2px;
-            line-height: 1.2;
-        }
-        .brand-text p {
-            margin: 1px 0 0;
-            color: var(--text-muted);
-            font-size: 13px;
-            font-weight: 400;
-        }
-        .topbar-badge {
-            padding: 8px 18px;
-            border-radius: 999px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text-muted);
-            font-size: 13px;
-            font-weight: 500;
-            backdrop-filter: blur(8px);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-            letter-spacing: .2px;
-        }
-        .topbar-badge .dot-indicator {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #4ade80;
-            display: inline-block;
-            animation: pulse-dot 2s ease-in-out infinite;
-        }
-        @keyframes pulse-dot {
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: .4;
-                transform: scale(.75);
-            }
-        }
+    /* ── particles ── */
+    .particles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .10);
+      animation: drift linear infinite;
+      will-change: transform;
+    }
+    .particle:nth-child(1) { width: 3px; height: 3px; left: 10%; top: 20%; animation-duration: 14s; }
+    .particle:nth-child(2) { width: 4px; height: 4px; left: 25%; top: 60%; animation-duration: 18s; animation-delay: -3s; opacity: .12; }
+    .particle:nth-child(3) { width: 3px; height: 3px; left: 55%; top: 15%; animation-duration: 16s; animation-delay: -6s; }
+    .particle:nth-child(4) { width: 5px; height: 5px; left: 70%; top: 70%; animation-duration: 20s; animation-delay: -9s; opacity: .08; }
+    .particle:nth-child(5) { width: 3px; height: 3px; left: 85%; top: 30%; animation-duration: 13s; animation-delay: -4s; }
+    .particle:nth-child(6) { width: 4px; height: 4px; left: 40%; top: 80%; animation-duration: 22s; animation-delay: -7s; opacity: .10; }
+    @keyframes drift {
+      0% { transform: translateY(0) translateX(0) scale(1); opacity: .2; }
+      25% { transform: translateY(-100px) translateX(20px) scale(1.2); opacity: .4; }
+      50% { transform: translateY(-200px) translateX(-15px) scale(.8); opacity: .2; }
+      75% { transform: translateY(-300px) translateX(30px) scale(1.1); opacity: .35; }
+      100% { transform: translateY(-400px) translateX(-10px) scale(1); opacity: .1; }
+    }
 
-        /* ── card ── */
-        .card {
-            border-radius: var(--radius);
-            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            overflow: hidden;
-            position: relative;
-            backdrop-filter: blur(2px);
-            transition: border-color var(--transition);
-        }
-        .card:hover {
-            border-color: var(--border-hover);
-        }
-        .card::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            pointer-events: none;
-            border-radius: var(--radius);
-            background:
-                radial-gradient(600px 200px at 15% 0%, rgba(124, 92, 255, .15), transparent 60%),
-                radial-gradient(500px 180px at 85% 5%, rgba(34, 211, 238, .10), transparent 55%);
-            opacity: .8;
-        }
-        .card-inner {
-            position: relative;
-            padding: 36px 28px 28px;
-            display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            gap: 28px;
-            align-items: start;
-        }
-        @media (max-width: 880px) {
-            .card-inner {
-                grid-template-columns: 1fr;
-                padding: 28px 18px 18px;
-                gap: 22px;
-            }
-            .topbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .topbar-badge {
-                align-self: flex-start;
-            }
-        }
-        @media (max-width: 480px) {
-            .card-inner {
-                padding: 20px 14px 14px;
-            }
-        }
+    /* ── wrap ── */
+    .wrap {
+      width: min(1040px, 100%);
+      position: relative;
+      z-index: 1;
+    }
 
-        /* ── left column ── */
-        .headline-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .headline {
-            margin: 0;
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.02;
-            letter-spacing: -.8px;
-            background: linear-gradient(135deg, #fff 40%, var(--accent2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 10px 40px rgba(124, 92, 255, .15);
-        }
-        @media (max-width: 600px) {
-            .headline {
-                font-size: 38px;
-            }
-        }
-        @media (max-width: 420px) {
-            .headline {
-                font-size: 30px;
-            }
-        }
-        .subhead {
-            margin: 6px 0 0;
-            color: var(--text-muted);
-            font-size: 17px;
-            line-height: 1.6;
-            max-width: 50ch;
-            font-weight: 400;
-        }
-        .subhead strong {
-            color: var(--text);
-            font-weight: 600;
-        }
+    /* ── topbar ── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      user-select: none;
+      flex-shrink: 0;
+    }
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 8px 30px var(--accent-glow);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, .10);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .brand-icon:hover {
+      transform: scale(1.04);
+      box-shadow: 0 12px 40px var(--accent-glow);
+    }
+    .brand-icon::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      background: conic-gradient(from 180deg, transparent, rgba(255, 255, 255, .20), transparent);
+      animation: spin 8s linear infinite;
+    }
+    .brand-icon::after {
+      content: 'C';
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,.30);
+      z-index: 1;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -.2px;
+      line-height: 1.2;
+    }
+    .brand-text p {
+      margin: 1px 0 0;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    .badge {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      height: 36px;
+    }
+    .badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      display: inline-block;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .4; transform: scale(.75); }
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+      text-transform: uppercase;
+      letter-spacing: .3px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      touch-action: manipulation;
+    }
+    .lang-btn:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    @media (max-width: 640px) {
+      .topbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .topbar-right {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+      .badge {
+        flex: 1;
+        justify-content: center;
+        font-size: 11px;
+        padding: 4px 10px;
+        height: 34px;
+      }
+      .lang-btn {
+        height: 34px;
+        font-size: 11px;
+        padding: 3px 10px;
+        min-width: 40px;
+      }
+      .brand-text h1 { font-size: 17px; }
+      .brand-text p { font-size: 11px; }
+      .brand-icon { width: 40px; height: 40px; }
+    }
 
-        /* ── language cards ── */
-        .lang-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-top: 22px;
-        }
-        @media (max-width: 520px) {
-            .lang-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .lang-card {
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            background: var(--surface);
-            padding: 16px 16px 14px;
-            position: relative;
-            transition: border-color var(--transition), background var(--transition);
-            backdrop-filter: blur(4px);
-        }
-        .lang-card:hover {
-            border-color: var(--border-hover);
-            background: var(--surface2);
-        }
-        .lang-card .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: .4px;
-        }
-        .lang-card .tag .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--accent2));
-            box-shadow: 0 4px 16px var(--accent-glow);
-        }
-        .lang-card h2 {
-            margin: 10px 0 4px;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: -.2px;
-            line-height: 1.3;
-        }
-        .lang-card p {
-            margin: 0;
-            color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.5;
-        }
+    /* ── card ── */
+    .card {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .01));
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+      transition: border-color var(--transition);
+    }
+    .card:hover {
+      border-color: var(--border-hover);
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      pointer-events: none;
+      border-radius: var(--radius);
+      background:
+        radial-gradient(600px 200px at 15% 0%, rgba(124, 92, 255, .10), transparent 60%),
+        radial-gradient(500px 180px at 85% 5%, rgba(34, 211, 238, .06), transparent 55%);
+      opacity: .8;
+    }
+    .card-inner {
+      position: relative;
+      padding: 28px 18px 20px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .card-inner {
+        grid-template-columns: 1fr;
+        padding: 20px 16px 16px;
+        gap: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .card-inner {
+        padding: 16px 12px 12px;
+        gap: 16px;
+      }
+    }
 
-        /* ── side panel ── */
-        .side-panel {
-            padding: 20px 20px 18px;
-            border-radius: var(--radius);
-            border: 1px solid var(--border);
-            background: rgba(0, 0, 0, .30);
-            backdrop-filter: blur(8px);
-            position: relative;
-            transition: border-color var(--transition);
-        }
-        .side-panel:hover {
-            border-color: var(--border-hover);
-        }
-        .side-panel .label {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: .5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .side-panel .domain-name {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: -.2px;
-            margin: 6px 0 4px;
-            word-break: break-word;
-            background: linear-gradient(135deg, #fff, var(--accent2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .side-panel .price-hint {
-            color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.4;
-            margin-bottom: 16px;
-        }
+    /* ── left column ── */
+    .headline {
+      margin: 0;
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -.6px;
+      background: linear-gradient(135deg, #fff 40%, var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @media (max-width: 600px) {
+      .headline { font-size: 34px; letter-spacing: -.4px; }
+    }
+    @media (max-width: 420px) {
+      .headline { font-size: 28px; }
+    }
+    .subhead {
+      margin: 8px 0 0;
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 48ch;
+    }
+    @media (max-width: 480px) {
+      .subhead { font-size: 15px; }
+    }
+    .subhead strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .message-box {
+      margin-top: 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color var(--transition);
+    }
+    .message-box:hover {
+      border-color: var(--border-hover);
+    }
+    .message-box .icon {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 4px 16px var(--accent-glow);
+      flex-shrink: 0;
+    }
+    .message-box .text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    @media (max-width: 480px) {
+      .message-box .text { font-size: 14px; }
+    }
 
-        /* ── form ── */
-        .form-group {
-            margin-bottom: 12px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 12.5px;
-            font-weight: 500;
-            color: var(--text-muted);
-            letter-spacing: .2px;
-            margin-bottom: 5px;
-        }
-        .form-group label .required {
-            color: #f87171;
-            margin-left: 2px;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border);
-            background: rgba(255, 255, 255, .04);
-            color: var(--text);
-            padding: 11px 14px;
-            outline: none;
-            font-size: 14px;
-            font-family: inherit;
-            transition: border-color var(--transition), box-shadow var(--transition);
-        }
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(124, 92, 255, .15);
-        }
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--text-dim);
-        }
-        .form-group textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-        .form-hint {
-            font-size: 12px;
-            color: var(--text-dim);
-            margin-top: 4px;
-        }
+    /* ── panel ── */
+    .panel {
+      padding: 18px 16px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, .35);
+      backdrop-filter: blur(8px);
+      transition: border-color var(--transition);
+    }
+    .panel:hover {
+      border-color: var(--border-hover);
+    }
+    .panel .label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+    }
+    .panel .domain {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -.3px;
+      margin: 4px 0 2px;
+      word-break: break-word;
+      background: linear-gradient(135deg, #fff, var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @media (max-width: 480px) {
+      .panel .domain { font-size: 22px; }
+    }
+    .panel .hint {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 480px) {
+      .panel .hint { font-size: 12px; }
+    }
 
-        /* ── actions ── */
-        .actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 6px;
-        }
-        .btn {
-            appearance: none;
-            border: none;
-            cursor: pointer;
-            border-radius: var(--radius-sm);
-            padding: 13px 18px;
-            font-weight: 600;
-            font-size: 15px;
-            letter-spacing: .2px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            user-select: none;
-            text-align: center;
-            font-family: inherit;
-            transition: transform .12s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
-            position: relative;
-        }
-        .btn:active {
-            transform: translateY(1px) scale(.98);
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent), #6d4bff);
-            color: #fff;
-            box-shadow: 0 12px 40px var(--accent-glow);
-            border: 1px solid rgba(255, 255, 255, .12);
-        }
-        .btn-primary:hover {
-            box-shadow: 0 16px 56px var(--accent-glow);
-            transform: translateY(-1px);
-            background: linear-gradient(135deg, #8a6eff, #7c5cff);
-        }
-        .btn-primary svg {
-            flex-shrink: 0;
-        }
-        .btn-primary svg path {
-            stroke: #fff;
-            fill: #fff;
-        }
-        .btn-primary .wa-icon {
-            width: 20px;
-            height: 20px;
-            fill: #fff;
-        }
+    /* ── form ── */
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .form-group label .req {
+      color: #f87171;
+      margin-left: 2px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .04);
+      color: var(--text);
+      padding: 12px 14px;
+      outline: none;
+      font-size: 16px; /* Prevents iOS zoom */
+      font-family: inherit;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(124, 92, 255, .15);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-dim);
+    }
+    .form-group textarea {
+      min-height: 68px;
+      resize: vertical;
+    }
+    .form-hint {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 3px;
+    }
+    @media (max-width: 480px) {
+      .form-group input,
+      .form-group textarea {
+        padding: 14px 14px;
+        font-size: 16px;
+      }
+    }
 
-        .btn-ghost {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            color: var(--text);
-            transition: border-color var(--transition), background var(--transition), transform var(--transition);
-        }
-        .btn-ghost:hover {
-            border-color: var(--border-hover);
-            background: var(--surface2);
-            transform: translateY(-1px);
-        }
-        .btn-ghost svg {
-            flex-shrink: 0;
-        }
+    /* ── buttons ── */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .btn {
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: .2px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      user-select: none;
+      font-family: inherit;
+      transition: transform .12s ease, box-shadow .3s ease, background .3s ease, border-color .3s ease;
+      position: relative;
+      min-height: 54px;
+      touch-action: manipulation;
+    }
+    .btn:active {
+      transform: translateY(1px) scale(.98);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #6d4bff);
+      color: #fff;
+      box-shadow: 0 12px 40px var(--accent-glow);
+      border: 1px solid rgba(255, 255, 255, .10);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 16px 56px var(--accent-glow);
+      transform: translateY(-1px);
+      background: linear-gradient(135deg, #8a6eff, #7c5cff);
+    }
+    .btn-primary svg {
+      flex-shrink: 0;
+    }
+    .btn-primary .wa-icon {
+      width: 22px;
+      height: 22px;
+    }
+    .btn-primary .wa-icon path {
+      stroke: #fff;
+      fill: #fff;
+    }
+    .btn-ghost {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      min-height: 50px;
+    }
+    .btn-ghost:hover {
+      border-color: var(--border-hover);
+      background: var(--surface2);
+      transform: translateY(-1px);
+    }
+    .btn-ghost svg {
+      flex-shrink: 0;
+    }
+    .btn .spinner {
+      display: none;
+      width: 22px;
+      height: 22px;
+      border: 2px solid rgba(255, 255, 255, .3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .btn.loading .spinner {
+      display: inline-block;
+    }
+    .btn.loading .btn-text {
+      opacity: .7;
+    }
+    .btn.loading {
+      pointer-events: none;
+    }
+    @media (max-width: 480px) {
+      .btn {
+        font-size: 15px;
+        padding: 14px 16px;
+        min-height: 50px;
+      }
+      .btn-ghost {
+        min-height: 46px;
+      }
+    }
 
-        /* ── fineprint ── */
-        .fineprint {
-            margin-top: 14px;
-            color: var(--text-dim);
-            font-size: 13px;
-            line-height: 1.5;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .kbd {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            padding: 3px 12px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            color: var(--text-muted);
-            font-size: 13px;
-            display: inline-block;
-            letter-spacing: .2px;
-        }
-        .kbd .copy-hint {
-            color: var(--text-dim);
-            font-size: 11px;
-            margin-left: 4px;
-        }
+    /* ── meta ── */
+    .meta {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      padding: 2px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .trust {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .trust-item svg {
+      flex-shrink: 0;
+      opacity: .5;
+    }
+    @media (max-width: 480px) {
+      .meta { font-size: 12px; gap: 8px; }
+      .trust-item { font-size: 12px; }
+    }
 
-        /* ── trust badges ── */
-        .trust-row {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-top: 14px;
-            padding-top: 14px;
-            border-top: 1px solid var(--border);
-        }
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12.5px;
-            color: var(--text-muted);
-        }
-        .trust-item svg {
-            flex-shrink: 0;
-            opacity: .6;
-        }
+    /* ── footer ── */
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--text-dim);
+      font-size: 12px;
+      padding: 0 4px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 480px) {
+      .footer { font-size: 11px; justify-content: center; text-align: center; }
+    }
 
-        /* ── footer ── */
-        .footer {
-            margin-top: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            color: var(--text-dim);
-            font-size: 13px;
-            padding: 0 4px;
-            flex-wrap: wrap;
-        }
-        .footer a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color var(--transition);
-        }
-        .footer a:hover {
-            color: var(--text);
-        }
+    /* ── toast ── */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: rgba(0, 0, 0, .90);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 24px;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .70);
+      opacity: 0;
+      transition: opacity .4s ease, transform .4s ease;
+      z-index: 999;
+      pointer-events: none;
+      text-align: center;
+      max-width: 90vw;
+      white-space: nowrap;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    @media (max-width: 480px) {
+      .toast {
+        font-size: 13px;
+        padding: 10px 18px;
+        bottom: 16px;
+      }
+    }
 
-        /* ── toast ── */
-        .toast {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%) translateY(80px);
-            background: rgba(0, 0, 0, .85);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            padding: 12px 24px;
-            color: var(--text);
-            font-size: 14px;
-            font-weight: 500;
-            box-shadow: 0 16px 48px rgba(0, 0, 0, .60);
-            opacity: 0;
-            transition: opacity .35s ease, transform .35s ease;
-            z-index: 999;
-            pointer-events: none;
-        }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        /* ── utilities ── */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-    </style>
+    /* ── utilities ── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- background -->
-    <div class="bg-canvas" aria-hidden="true">
-        <div class="orb"></div>
-        <div class="orb"></div>
-        <div class="orb"></div>
-    </div>
-    <div class="particles" aria-hidden="true">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+  <!-- background -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <div class="particles" aria-hidden="true">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
 
-    <!-- toast -->
-    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  <!-- toast -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
 
-    <!-- main -->
-    <div class="wrap">
-        <!-- topbar -->
-        <header class="topbar">
-            <a class="brand" href="#" aria-label="Cenaze.com home">
-                <div class="brand-logo" aria-hidden="true"></div>
-                <div class="brand-text">
-                    <h1>cenaze.com</h1>
-                    <p>Premium domain for sale</p>
-                </div>
-            </a>
-            <div class="topbar-badge">
-                <span class="dot-indicator" aria-hidden="true"></span>
-                Available now
+  <!-- main -->
+  <div class="wrap">
+
+    <!-- topbar -->
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="cenaze.com">
+        <div class="brand-icon" aria-hidden="true"></div>
+        <div class="brand-text">
+          <h1>cenaze.com</h1>
+          <p data-i18n="tagline">Premium domain for sale</p>
+        </div>
+      </a>
+      <div class="topbar-right">
+        <div class="badge">
+          <span class="dot" aria-hidden="true"></span>
+          <span data-i18n="badge">Available now</span>
+        </div>
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="tr" aria-label="Türkçe">TR</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- card -->
+    <main class="card">
+      <div class="card-inner">
+
+        <!-- left -->
+        <section>
+          <h1 class="headline" data-i18n="headline">This Domain<br />Is For Sale</h1>
+          <p class="subhead" data-i18n="subhead">
+            Fill in the form below, then tap <strong>WhatsApp</strong> to send your offer instantly.
+          </p>
+          <div class="message-box">
+            <span class="icon" aria-hidden="true"></span>
+            <span class="text" data-i18n="message">
+              This domain is for sale. Send your offer via WhatsApp using the form.
+            </span>
+          </div>
+        </section>
+
+        <!-- right / panel -->
+        <aside class="panel">
+          <div class="label" data-i18n="domain_label">Domain</div>
+          <div class="domain">cenaze.com</div>
+          <div class="hint" data-i18n="price_hint">Pricing by offer &bull; Private negotiations welcome.</div>
+
+          <form class="form" id="offerForm" novalidate autocomplete="on">
+            <div class="form-group">
+              <label for="name" data-i18n="label_name">Your name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" placeholder="e.g. John Doe" autocomplete="name" required />
             </div>
-        </header>
-
-        <!-- card -->
-        <main class="card">
-            <div class="card-inner">
-                <!-- left -->
-                <section>
-                    <div class="headline-wrap">
-                        <h1 class="headline">cenaze.com<br />Is For Sale</h1>
-                        <p class="subhead">
-                            Fill in the form below, then tap <strong>WhatsApp</strong> to send your offer instantly.
-                        </p>
-                    </div>
-
-                    <div class="lang-grid" role="group" aria-label="Bilingual information">
-                        <div class="lang-card">
-                            <div class="tag"><span class="dot" aria-hidden="true"></span> English</div>
-                            <h2>cenaze.com is for sale.</h2>
-                            <p>Send your offer via WhatsApp using the form.</p>
-                        </div>
-                        <div class="lang-card">
-                            <div class="tag"><span class="dot" aria-hidden="true"></span> Türkçe</div>
-                            <h2>Bu alan adı satıştadır.</h2>
-                            <p>Formu doldur, WhatsApp'tan teklifini gönder.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- right / side panel -->
-                <aside class="side-panel">
-                    <div class="label">Domain</div>
-                    <div class="domain-name">cenaze.com</div>
-                    <div class="price-hint">Pricing by offer &bull; Private negotiations welcome.</div>
-
-                    <form class="form" id="offerForm" novalidate>
-                        <div class="form-group">
-                            <label for="name">Your name <span class="required">*</span></label>
-                            <input id="name" name="name" type="text" placeholder="e.g. John Doe" autocomplete="name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="offer">Offer amount <span class="required">*</span></label>
-                            <input id="offer" name="offer" type="text" placeholder="e.g. 5,000 USD" required />
-                            <div class="form-hint">Enter your currency and amount.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email <span style="color:var(--text-dim);font-weight:400;">(optional)</span></label>
-                            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Additional note <span style="color:var(--text-dim);font-weight:400;">(optional)</span></label>
-                            <textarea id="message" name="message" placeholder="Timeline, transfer method, or any details…"></textarea>
-                        </div>
-                    </form>
-
-                    <div class="actions">
-                        <a class="btn btn-primary" id="waBtn" href="#" target="_blank" rel="noopener">
-                            <svg class="wa-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
-                                <path d="M12 21a9 9 0 1 0-7.7-4.4L3 21l4.6-1.2A9 9 0 0 0 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                                <path d="M9.2 8.6c.2-.5.5-.5.7-.5h.5c.2 0 .4 0 .6.5.2.5.7 1.7.8 1.8.1.1.1.3 0 .5-.1.2-.2.3-.3.4-.1.1-.2.2-.1.4.1.2.5.9 1.1 1.4.7.6 1.3.8 1.5.9.2.1.3.1.4 0 .1-.1.5-.6.6-.8.1-.2.3-.2.4-.1.2.1 1.3.6 1.5.7.2.1.3.2.3.4 0 .2 0 .9-.4 1.3-.4.4-1 .5-1.4.4-.5-.1-1.9-.7-3.2-2-1.3-1.3-1.9-2.7-2-3.2-.1-.5 0-.9.2-1.2Z" fill="currentColor" />
-                            </svg>
-                            Send Offer via WhatsApp
-                        </a>
-                        <button class="btn btn-ghost" id="copyBtn" type="button">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M9 9h10v10H9V9Z" stroke="currentColor" stroke-width="2" />
-                                <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                            Copy Domain
-                        </button>
-                    </div>
-
-                    <div class="fineprint">
-                        <span>📞</span>
-                        <span class="kbd">+989390247578</span>
-                        <span style="color:var(--text-dim);font-size:12px;">&bull; reply within hours</span>
-                    </div>
-
-                    <div class="trust-row">
-                        <span class="trust-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-                            Secure transfer
-                        </span>
-                        <span class="trust-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                            Fast reply
-                        </span>
-                        <span class="trust-item">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"/></svg>
-                            Verified seller
-                        </span>
-                    </div>
-                </aside>
+            <div class="form-group">
+              <label for="offer" data-i18n="label_offer">Offer amount <span class="req">*</span></label>
+              <input id="offer" name="offer" type="text" placeholder="e.g. 5,000 USD" required />
+              <div class="form-hint" data-i18n="offer_hint">Enter your currency and amount.</div>
             </div>
-        </main>
-
-        <!-- footer -->
-        <footer class="footer">
-            <div>&copy; <span id="year"></span> cenaze.com &bull; All rights reserved</div>
-            <div>
-                <span class="kbd" style="font-size:12px;padding:2px 12px;">This page is for sale</span>
+            <div class="form-group">
+              <label for="email" data-i18n="label_email">Email <span style="color:var(--text-dim);font-weight:400;">(optional)</span></label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" />
             </div>
-        </footer>
-    </div>
+            <div class="form-group">
+              <label for="message" data-i18n="label_note">Additional note <span style="color:var(--text-dim);font-weight:400;">(optional)</span></label>
+              <textarea id="message" name="message" placeholder="Timeline, transfer method, or any details…"></textarea>
+            </div>
+          </form>
 
-    <script>
-        (function() {
-            'use strict';
+          <div class="actions">
+            <button class="btn btn-primary" id="waBtn" type="button">
+              <svg class="wa-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="22" height="22">
+                <path d="M12 21a9 9 0 1 0-7.7-4.4L3 21l4.6-1.2A9 9 0 0 0 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M9.2 8.6c.2-.5.5-.5.7-.5h.5c.2 0 .4 0 .6.5.2.5.7 1.7.8 1.8.1.1.1.3 0 .5-.1.2-.2.3-.3.4-.1.1-.2.2-.1.4.1.2.5.9 1.1 1.4.7.6 1.3.8 1.5.9.2.1.3.1.4 0 .1-.1.5-.6.6-.8.1-.2.3-.2.4-.1.2.1 1.3.6 1.5.7.2.1.3.2.3.4 0 .2 0 .9-.4 1.3-.4.4-1 .5-1.4.4-.5-.1-1.9-.7-3.2-2-1.3-1.3-1.9-2.7-2-3.2-.1-.5 0-.9.2-1.2Z" fill="currentColor" />
+              </svg>
+              <span class="btn-text" data-i18n="wa_button">Send Offer via WhatsApp</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+            <button class="btn btn-ghost" id="copyBtn" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 9h10v10H9V9Z" stroke="currentColor" stroke-width="2" />
+                <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span data-i18n="copy_button">Copy Domain</span>
+            </button>
+          </div>
 
-            // ── constants ──
-            const DOMAIN = 'cenaze.com';
-            const PHONE = '989390247578'; // WhatsApp: country code without '+'
+          <div class="meta">
+            <span>📞</span>
+            <span class="kbd">+989390247578</span>
+            <span style="color:var(--text-dim);font-size:12px;" data-i18n="reply_time">&bull; reply within hours</span>
+          </div>
 
-            // ── DOM refs ──
-            const nameEl = document.getElementById('name');
-            const offerEl = document.getElementById('offer');
-            const emailEl = document.getElementById('email');
-            const msgEl = document.getElementById('message');
-            const waBtn = document.getElementById('waBtn');
-            const copyBtn = document.getElementById('copyBtn');
-            const toast = document.getElementById('toast');
+          <div class="trust">
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span data-i18n="trust_secure">Secure transfer</span>
+            </span>
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span data-i18n="trust_fast">Fast reply</span>
+            </span>
+            <span class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 22v-4M4 12H2M22 12h-2M19.07 4.93l-2.83 2.83M6.34 17.66l-2.83 2.83M17.66 6.34l2.83-2.83M4.93 19.07l2.83-2.83"/></svg>
+              <span data-i18n="trust_verified">Verified seller</span>
+            </span>
+          </div>
+        </aside>
 
-            // ── year ──
-            document.getElementById('year').textContent = new Date().getFullYear();
+      </div>
+    </main>
 
-            // ── helpers ──
-            function clean(s) { return (s ?? '').toString().trim(); }
+    <!-- footer -->
+    <footer class="footer">
+      <div>&copy; <span id="year"></span> cenaze.com &bull; <span data-i18n="footer_rights">All rights reserved</span></div>
+      <div>
+        <span class="kbd" style="font-size:12px;padding:2px 12px;" data-i18n="footer_badge">This page is for sale</span>
+      </div>
+    </footer>
 
-            function showToast(text, duration) {
-                duration = duration || 2000;
-                toast.textContent = text;
-                toast.classList.add('show');
-                clearTimeout(toast._hide);
-                toast._hide = setTimeout(function() {
-                    toast.classList.remove('show');
-                }, duration);
-            }
+  </div>
 
-            // ── build message ──
-            function buildMessage() {
-                const name = clean(nameEl.value);
-                const offer = clean(offerEl.value);
-                const email = clean(emailEl.value);
-                const extra = clean(msgEl.value);
+  <script>
+    (function() {
+      'use strict';
 
-                const lines = [
-                    `Hi! I'm interested in buying ${DOMAIN}.`,
-                    ``,
-                    `Offer details:`,
-                    `Name: ${name || '(please add your name)'}`,
-                    offer ? `Amount: ${offer}` : `Amount: (please add your offer amount)`
-                ];
-                if (email) lines.push(`Email: ${email}`);
-                if (extra) lines.push(`Note: ${extra}`);
-                return lines.join('\n');
-            }
+      // ── config ──
+      const DOMAIN = 'cenaze.com';
+      const PHONE = '989390247578';
 
-            // ── update WhatsApp link ──
-            function updateWhatsAppLink() {
-                const message = buildMessage();
-                waBtn.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
-            }
+      // ── translations (English & Turkish only) ──
+      const t = {
+        en: {
+          tagline: 'Premium domain for sale',
+          badge: 'Available now',
+          headline: 'This Domain<br />Is For Sale',
+          subhead: 'Fill in the form below, then tap <strong>WhatsApp</strong> to send your offer instantly.',
+          message: 'This domain is for sale. Send your offer via WhatsApp using the form.',
+          domain_label: 'Domain',
+          price_hint: 'Pricing by offer • Private negotiations welcome.',
+          label_name: 'Your name <span class="req">*</span>',
+          label_offer: 'Offer amount <span class="req">*</span>',
+          offer_hint: 'Enter your currency and amount.',
+          label_email: 'Email <span style="color:var(--text-dim);font-weight:400;">(optional)</span>',
+          label_note: 'Additional note <span style="color:var(--text-dim);font-weight:400;">(optional)</span>',
+          wa_button: 'Send Offer via WhatsApp',
+          copy_button: 'Copy Domain',
+          reply_time: '• reply within hours',
+          trust_secure: 'Secure transfer',
+          trust_fast: 'Fast reply',
+          trust_verified: 'Verified seller',
+          footer_rights: 'All rights reserved',
+          footer_badge: 'This page is for sale',
+          wa_intro: "Hi! I'm interested in buying {{domain}}.",
+          wa_offer_label: "Offer details:",
+          wa_name_label: "Name:",
+          wa_amount_label: "Amount:",
+          wa_email_label: "Email:",
+          wa_note_label: "Note:",
+          wa_missing_name: "(please add your name)",
+          wa_missing_amount: "(please add your offer amount)",
+          err_name: 'Please enter your name.',
+          err_offer: 'Please enter your offer amount.',
+          copied: 'Copied!',
+          copy_success: 'Copied "{{domain}}" to clipboard.'
+        },
+        tr: {
+          tagline: 'Premium alan adı satışta',
+          badge: 'Şimdi müsait',
+          headline: 'Bu Alan Adı<br />Satıştadır',
+          subhead: 'Aşağıdaki formu doldurun, ardından teklifinizi anında göndermek için <strong>WhatsApp</strong> \'a dokunun.',
+          message: 'Bu alan adı satıştadır. Formu kullanarak WhatsApp\'tan teklifinizi gönderin.',
+          domain_label: 'Alan Adı',
+          price_hint: 'Teklifle fiyatlandırma • Özel görüşmelere açığız.',
+          label_name: 'Adınız <span class="req">*</span>',
+          label_offer: 'Teklif miktarı <span class="req">*</span>',
+          offer_hint: 'Para biriminizi ve tutarı girin.',
+          label_email: 'E-posta <span style="color:var(--text-dim);font-weight:400;">(isteğe bağlı)</span>',
+          label_note: 'Ek not <span style="color:var(--text-dim);font-weight:400;">(isteğe bağlı)</span>',
+          wa_button: 'WhatsApp ile Teklif Gönder',
+          copy_button: 'Alan Adını Kopyala',
+          reply_time: '• saatler içinde yanıt',
+          trust_secure: 'Güvenli transfer',
+          trust_fast: 'Hızlı yanıt',
+          trust_verified: 'Doğrulanmış satıcı',
+          footer_rights: 'Tüm hakları saklıdır',
+          footer_badge: 'Bu sayfa satıştadır',
+          wa_intro: "Merhaba, {{domain}} alan adını satın almakla ilgileniyorum.",
+          wa_offer_label: "Teklif detayları:",
+          wa_name_label: "İsim:",
+          wa_amount_label: "Miktar:",
+          wa_email_label: "E-posta:",
+          wa_note_label: "Not:",
+          wa_missing_name: "(lütfen adınızı ekleyin)",
+          wa_missing_amount: "(lütfen teklif miktarını ekleyin)",
+          err_name: 'Lütfen adınızı girin.',
+          err_offer: 'Lütfen teklif miktarını girin.',
+          copied: 'Kopyalandı!',
+          copy_success: '"{{domain}}" kopyalandı.'
+        }
+      };
 
-            // ── form validation ──
-            function validateForm() {
-                const name = clean(nameEl.value);
-                const offer = clean(offerEl.value);
-                if (!name) {
-                    showToast('Please enter your name.', 1800);
-                    nameEl.focus();
-                    return false;
-                }
-                if (!offer) {
-                    showToast('Please enter your offer amount.', 1800);
-                    offerEl.focus();
-                    return false;
-                }
-                return true;
-            }
+      // ── DOM refs ──
+      const htmlRoot = document.getElementById('htmlRoot');
+      const i18nEls = document.querySelectorAll('[data-i18n]');
+      const langBtns = document.querySelectorAll('.lang-btn');
+      const nameEl = document.getElementById('name');
+      const offerEl = document.getElementById('offer');
+      const emailEl = document.getElementById('email');
+      const msgEl = document.getElementById('message');
+      const waBtn = document.getElementById('waBtn');
+      const copyBtn = document.getElementById('copyBtn');
+      const toast = document.getElementById('toast');
 
-            // ── events: update link live ──
-            [nameEl, offerEl, emailEl, msgEl].forEach(function(el) {
-                el.addEventListener('input', updateWhatsAppLink);
-                el.addEventListener('change', updateWhatsAppLink);
-            });
+      // ── helpers ──
+      function clean(s) { return (s ?? '').toString().trim(); }
 
-            // ── WhatsApp click ──
-            waBtn.addEventListener('click', function(e) {
-                if (!validateForm()) {
-                    e.preventDefault();
-                    return;
-                }
-                // Update link one last time before opening
-                updateWhatsAppLink();
-                // Let the link open normally
-            });
+      function getLang() {
+        const browser = navigator.language || navigator.languages?.[0] || 'en';
+        const code = browser.split('-')[0].toLowerCase();
+        return code === 'tr' ? 'tr' : 'en';
+      }
 
-            // ── copy domain ──
-            copyBtn.addEventListener('click', async function() {
-                try {
-                    await navigator.clipboard.writeText(DOMAIN);
-                    const old = copyBtn.innerHTML;
-                    copyBtn.innerHTML = '✓ Copied!';
-                    setTimeout(function() {
-                        copyBtn.innerHTML = old;
-                    }, 1400);
-                    showToast(`Copied "${DOMAIN}" to clipboard.`, 1400);
-                } catch (_) {
-                    // fallback
-                    const textarea = document.createElement('textarea');
-                    textarea.value = DOMAIN;
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    try {
-                        document.execCommand('copy');
-                        showToast(`Copied "${DOMAIN}" to clipboard.`, 1400);
-                    } catch (__) {
-                        showToast(`Copy: ${DOMAIN}`, 1800);
-                    }
-                    document.body.removeChild(textarea);
-                }
-            });
+      let currentLang = getLang();
 
-            // ── initial link ──
-            updateWhatsAppLink();
+      function showToast(text, duration) {
+        duration = duration || 2200;
+        toast.textContent = text;
+        toast.classList.add('show');
+        clearTimeout(toast._hide);
+        toast._hide = setTimeout(() => toast.classList.remove('show'), duration);
+      }
 
-            // ── keyboard shortcut: Cmd/Ctrl + Enter to send ──
-            document.addEventListener('keydown', function(e) {
-                if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
-                    const active = document.activeElement;
-                    if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
-                        if (validateForm()) {
-                            waBtn.click();
-                        }
-                        e.preventDefault();
-                    }
-                }
-            });
+      // ── apply language ──
+      function applyLanguage(lang) {
+        if (!t[lang]) lang = 'en';
+        currentLang = lang;
 
-            // ── auto-focus name on load ──
-            setTimeout(function() {
-                nameEl.focus();
-            }, 400);
+        htmlRoot.lang = lang;
+        // Always LTR (no Persian, so no RTL needed)
+        htmlRoot.dir = 'ltr';
 
-        })();
-    </script>
+        i18nEls.forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          const val = t[lang]?.[key];
+          if (val !== undefined) {
+            el.innerHTML = val;
+          }
+        });
+
+        langBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        // placeholders
+        const ph = {
+          en: { name: 'e.g. John Doe', offer: 'e.g. 5,000 USD', email: 'you@example.com',
+            msg: 'Timeline, transfer method, or any details…' },
+          tr: { name: 'örn. Ahmet Yılmaz', offer: 'örn. 5.000 USD', email: 'ornek@mail.com',
+            msg: 'Zaman çizelgesi, transfer yöntemi veya detaylar…' }
+        };
+        const p = ph[lang] || ph.en;
+        nameEl.placeholder = p.name;
+        offerEl.placeholder = p.offer;
+        emailEl.placeholder = p.email;
+        msgEl.placeholder = p.msg;
+
+        // update button text
+        const btnText = waBtn.querySelector('.btn-text');
+        if (btnText) {
+          const waKey = 'wa_button';
+          const waVal = t[lang]?.[waKey];
+          if (waVal) btnText.textContent = waVal;
+        }
+      }
+
+      // ── language switcher ──
+      langBtns.forEach(btn => {
+        btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+      });
+
+      // ── build WhatsApp message ──
+      function buildMessage() {
+        const dict = t[currentLang] || t.en;
+        const name = clean(nameEl.value);
+        const offer = clean(offerEl.value);
+        const email = clean(emailEl.value);
+        const extra = clean(msgEl.value);
+
+        const lines = [
+          dict.wa_intro.replace('{{domain}}', DOMAIN),
+          '',
+          dict.wa_offer_label,
+          dict.wa_name_label + ' ' + (name || dict.wa_missing_name),
+          dict.wa_amount_label + ' ' + (offer || dict.wa_missing_amount)
+        ];
+        if (email) lines.push(dict.wa_email_label + ' ' + email);
+        if (extra) lines.push(dict.wa_note_label + ' ' + extra);
+        return lines.join('\n');
+      }
+
+      // ── send WhatsApp ──
+      function sendWhatsApp() {
+        const dict = t[currentLang] || t.en;
+        const name = clean(nameEl.value);
+        const offer = clean(offerEl.value);
+
+        if (!name) {
+          showToast(dict.err_name);
+          nameEl.focus();
+          return;
+        }
+        if (!offer) {
+          showToast(dict.err_offer);
+          offerEl.focus();
+          return;
+        }
+
+        waBtn.classList.add('loading');
+        waBtn.disabled = true;
+
+        const message = buildMessage();
+        const url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(message);
+
+        setTimeout(() => {
+          window.open(url, '_blank');
+          waBtn.classList.remove('loading');
+          waBtn.disabled = false;
+        }, 300);
+      }
+
+      // ── copy domain ──
+      async function copyDomain() {
+        const dict = t[currentLang] || t.en;
+        try {
+          await navigator.clipboard.writeText(DOMAIN);
+          const old = copyBtn.innerHTML;
+          copyBtn.innerHTML = '✓ ' + dict.copied;
+          setTimeout(() => { copyBtn.innerHTML = old; }, 1500);
+          showToast(dict.copy_success.replace('{{domain}}', DOMAIN));
+        } catch (_) {
+          const ta = document.createElement('textarea');
+          ta.value = DOMAIN;
+          document.body.appendChild(ta);
+          ta.select();
+          try {
+            document.execCommand('copy');
+            showToast(dict.copy_success.replace('{{domain}}', DOMAIN));
+          } catch (__) {
+            showToast(DOMAIN);
+          }
+          document.body.removeChild(ta);
+        }
+      }
+
+      // ── events ──
+      waBtn.addEventListener('click', sendWhatsApp);
+      copyBtn.addEventListener('click', copyDomain);
+
+      // Enter key submits (except textarea)
+      document.querySelectorAll('#offerForm input, #offerForm textarea').forEach(el => {
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && el.tagName !== 'TEXTAREA') {
+            e.preventDefault();
+            sendWhatsApp();
+          }
+        });
+      });
+
+      // Cmd+Enter / Ctrl+Enter
+      document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+          const active = document.activeElement;
+          if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
+            sendWhatsApp();
+            e.preventDefault();
+          }
+        }
+      });
+
+      // ── init ──
+      applyLanguage(currentLang);
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // focus name after load
+      setTimeout(() => nameEl.focus(), 500);
+
+    })();
+  </script>
 
 </body>
 </html>
